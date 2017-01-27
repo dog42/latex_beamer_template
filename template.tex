@@ -1,5 +1,15 @@
-\documentclass[11pt,aspectratio=169,handout]{beamer}%
-\usetheme{Montpellier}
+\documentclass[11pt,aspectratio=169]{beamer}% Normal
+%\documentclass[11pt,aspectratio=169,handout]{beamer}% Für Handout
+\usetheme{CambridgeUS}
+% AnnArbor | Antibes | Bergen | Berkeley | Berlin | Boadilla | boxes | CambridgeUS | Copenhagen | Darmstadt |
+% default | Dresden | Frankfurt | Goettingen | Hannover | Ilmenau | JuanLesPins | Luebeck | Madrid | Malmoe |
+% Marburg |	Montpellier | PaloAlto | Pittsburgh | Rochester | Singapore | Szeged |	Warsaw
+
+%\usecolortheme{beaver}	% Farbtheme
+%\useinnertheme{beaver}	% inneres Theme (Titelseite, Umgebungen wie Aufzählungen und Blöcke,…)
+%\useoutertheme{beaver}	% äußeres Theme (Kopf- und Fußzeile, Sidebars, Folientitel, Logo)
+%\usefonttheme{beaver}	% Schrifttheme
+
 \usepackage[utf8]{inputenc}
 %\usepackage[english]{babel}
 \usepackage{amsmath}
@@ -17,6 +27,8 @@
 \usepackage{lipsum}
 \usepackage{graphicx}
 \usepackage{lmodern}
+\usepackage{amssymb}
+\usepackage{wasysym}
 
 \title{
 \textcolor{cl1}{\Huge SUPER TOLLES THEMA}\newline
@@ -27,12 +39,19 @@
 \author{\tiny Dockhorn}
 \date{\vspace*{-0.5cm}\tiny\today{}}
 \usepackage{template}
+
+
+
+
+
+
+
 \begin{document}
 %###########################################################################################################################################
 \begin{frame}
-\vspace{-1cm}
+%\vspace{-1cm}
 \includegraphics[width=\textwidth]{logo/top.png}\\\vspace{1cm}
-\includegraphics[height=1cm]{logo/left.png}\hfill\includegraphics[height=1cm]{logo/right.png}\hspace{0.2cm}
+%\includegraphics[height=1cm]{logo/left.png}\hfill\includegraphics[height=1cm]{logo/right.png}\hspace{0.2cm}
 \maketitle
 \thispagestyle{empty}
 \end{frame}
@@ -41,6 +60,29 @@
 \begin{frame}
 \frametitle{TITEL 1}
 
+\begin{itemize}			
+	\item<1-> erster Punkt $\CheckedBox$
+	\begin{itemize}			
+	\item<2->  erster Punkt
+		\begin{itemize}			
+		\item<3->  erster Punkt
+		\item<4->  zweiter Punkt
+		\end{itemize}
+		\item<5->  zweiter Punkt
+	\end{itemize}
+	\item<6->  zweiter Punkt
+\end{itemize}
+ 
+\begin{enumerate}		
+	\item erster Punkt (1.)
+	\item zweiter Punkt (2.)
+	\begin{enumerate}
+		\item Verschachtelung (2.1)
+		\item zweiter Unterpunkt (2.2)
+	\end{enumerate}
+	\item dritter Punkt (3.)
+\end{enumerate}
+
 \end{frame}
 %###########################################################################################################################################
 \begin{frame}
@@ -48,9 +90,9 @@
 \begin{block}{BLOCK 1}
 
 \end{block}
-\begin{block}{BLOCK 2}
+\begin{alertblock}{BLOCK 2}
 
-\end{block}
+\end{alertblock}
 \end{frame}
 %###########################################################################################################################################
 \section{SECTION 2}
